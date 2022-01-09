@@ -57,6 +57,7 @@ input_segments_id = Input(shape=(2, maxlen))
 ```python
 x_in1 = bert_model([input_tokens_id[:, 0, :], input_segments_id[:, 0, :]])
 x_in2 = bert_model([input_tokens_id[:, 1, :], input_segments_id[:, 1, :]])
+
 ```
 这里对句子对做处理，分别得到token_id和segments_id，shape均为(None,2,maxlen)，然后做切片操作，分别送入bert模型中，x_in1,x_in2的shape均为
 (None,maxlen,768)，
@@ -96,7 +97,7 @@ distance = Lambda(cosine_distance, output_shape=dist_output_shape)([q1, q2])
 * optimizer 采用AdamLR,分段线性学习率，学习率逐渐降低，加快收敛并提高泛化性
 
 
-run
+##run
 ![img_4.png](img_4.png)
 
 最终在测试集上的准确率82.9%,可以调参进一步提高准确率

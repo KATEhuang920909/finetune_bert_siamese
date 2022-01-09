@@ -104,7 +104,7 @@ distance = Lambda(cosine_distance, output_shape=dist_output_shape)([q1, q2])
 
 
 
-总结：
+##总结
 
 **主要是里面的预处理以及切片操作，整体结构也较为简单**
 

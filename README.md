@@ -64,7 +64,7 @@ x_in2 = bert_model([input_tokens_id[:, 1, :], input_segments_id[:, 1, :]])
 ##lstm层
 这里可采用共享参数或者非共享参数的方式：
 非共享：
-![img_5.png](img_5.png)
+![img_3.png](img_3.png)
 共享：
 ```python
 if use_bilstm:

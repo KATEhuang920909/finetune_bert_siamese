@@ -36,8 +36,8 @@ def load_data(filename):
     D = []
     with open(filename, encoding='utf-8') as f:
         for l in f:
-            text, label = l.strip().split('\t')
-            D.append((text, int(label)))
+            text1,text2, label = l.strip().split('\t')
+            D.append((text1,text2, int(label)))
     return D
 
 

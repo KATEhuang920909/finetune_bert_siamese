@@ -161,6 +161,6 @@ if __name__ == '__main__':
         epochs=10,
         callbacks=[evaluator]
     )
-    bert_siamese_model = bert_siamese_model.load_weights('best_model.h5')
+    bert_siamese_model.load_weights('best_model.h5')
     print(u'final test acc: %05f\n' % (evaluate(test_generator)))
 
